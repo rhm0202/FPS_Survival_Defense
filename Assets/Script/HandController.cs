@@ -25,6 +25,7 @@ public class HandController : MonoBehaviour
         {
             if (!isAttack)
             {
+                
                 StartCoroutine(AttackCoroutine());
             }
         }
@@ -57,13 +58,14 @@ public class HandController : MonoBehaviour
                 isSwing = false;
                 Debug.Log(hitinfo.transform.name);
             }
+            yield return null;
         }
-        yield return null;
+        
     }
 
     private bool CheckObject()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hitinfo, currentHand.range))
+        if (Physics.Raycast(transform.position, transform.forward, out hitinfo, currentHand.range))
         {
             return true;
         }
