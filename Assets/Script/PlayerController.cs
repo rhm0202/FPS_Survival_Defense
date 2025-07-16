@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Camera theCamera;
     private Rigidbody myRigid;
+    private GunController theGunController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         myRigid = GetComponent<Rigidbody>();
         applySpeed = walkSpeed;
+        theGunController = FindObjectOfType<GunController>();
 
         //초기화
         originPosY = theCamera.transform.localPosition.y;
@@ -162,6 +164,9 @@ public class PlayerController : MonoBehaviour
         {
             Crouch();
         }
+
+        theGunController.CancelFineSight();
+
         isRun = true;
         applySpeed = runSpeed;
     }

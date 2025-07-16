@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGun: {fileID: 1056218778}
+  originPos: {x: 0, y: 0, z: 0}
 --- !u!82 &81118934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -470,7 +471,7 @@ MonoBehaviour:
   walkSpeed: 10
   runSpeed: 20
   crouchSpeed: 0
-  jumpForce: 15
+  jumpForce: 5
   lookSensitivity: 2
   cameraRotationLimit: 45
   theCamera: {fileID: 330585545}
@@ -1101,7 +1102,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc0b81b07325c9f47b78516342446b49, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3968331098899573409, guid: dc0b81b07325c9f47b78516342446b49, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1229050766}
     m_AddedComponents:
@@ -1127,7 +1128,7 @@ Animator:
   m_GameObject: {fileID: 94446533}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32e9ee1b9ec86364fa9dc6adf114b6ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1157,16 +1158,21 @@ MonoBehaviour:
   fireRate: 0.2
   reloadTime: 2
   damage: 30
-  reloadBulletCount: 30
-  currentBulletCount: 30
+  reloadBulletCount: 10
+  currentBulletCount: 10
   maxBulletCount: 0
-  carryBulletCount: 0
-  retroActionForce: 0
-  retroActionFineSightForce: 0
-  fineSightOriginPos: {x: 0, y: 0, z: 0}
+  carryBulletCount: 23
+  retroActionForce: 0.3
+  retroActionFineSightForce: 0.7
+  fineSightOriginPos: {x: 0.6, y: 0.335, z: -0.586}
   anim: {fileID: 1056218777}
   muzzleFlash: {fileID: 1229050765}
   fire_Sound: {fileID: 8300000, guid: f31426362da90d94fa774becb0fdd0c4, type: 3}
+--- !u!4 &1150220013 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3968331098899573409, guid: dc0b81b07325c9f47b78516342446b49, type: 3}
+  m_PrefabInstance: {fileID: 1056218775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229050763
 GameObject:
   m_ObjectHideFlags: 0
@@ -6051,14 +6057,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229050763}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -2.8758013, y: 0.38279992, z: 0.42899966}
-  m_LocalScale: {x: 0.09999999, y: 0.10000001, z: 0.10000002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00026, y: 0.02032, z: -0.00072}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1685599089}
-  m_Father: {fileID: 1056218776}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_Father: {fileID: 1150220013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1289525467
 PrefabInstance:
   m_ObjectHideFlags: 0
